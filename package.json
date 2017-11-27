@@ -1,0 +1,14 @@
+{
+  "name": "ChickagoBulls",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./app.js"
+  },
+  "dependencies": {
+    "express": "^4.13.4",
+    "nodemon": "^1.12.1",
+    "pug": "^2.0.0-rc.4",
+    "socket.io": "^2.0.4"
+  }
+}

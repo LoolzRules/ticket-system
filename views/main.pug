@@ -1,0 +1,37 @@
+html
+    head
+        title Chicago Bulls Ticket System
+        link(rel="stylesheet", href="/css/bootstrap-reboot.min.css")
+        link(rel="stylesheet", href="/css/bootstrap.min.css")
+        link(rel="stylesheet", href="/css/bootstrap-grid.min.css")
+        link(rel="stylesheet", href="/css/custom.css")
+
+    body.bg-light
+
+        if isEditor
+            div.row.no-gutters.justify-content-center
+                div.col-xs-12.col-md-8.input-group.px-4.py-2.bg-dark
+                    input#id.form-control(type="text", placeholder="Order ID", aria-label="Order ID" data-toggle="tooltip")
+                    span#add_button.input-group-btn
+                        button.btn.btn-success.btn-lg(type="button") Add
+
+        div.row.no-gutters.justify-content-center
+            div.col-xs-12.col-sm-6.col-md-4.no-gutters
+                div.col-12.bg-dark
+                    h2.text-light.text-center.text-uppercase.m-0.p-2 Preparing
+                ul#preparing.list-group.col-12
+
+            div.col-xs-12.col-sm-6.col-md-4.no-gutters
+                div.col-12.bg-dark
+                    h2.text-light.text-center.text-uppercase.m-0.p-2 Ready
+                ul#ready.list-group.col-12
+
+
+        script(src="/socket.io/socket.io.js")
+        script(src="/js/jquery-3.2.1.min.js")
+        if !isEditor
+            script(src="/js/viewer.js")
+        else
+            script(src="/js/popper.min.js")
+            script(src="/js/bootstrap.min.js")
+            script(src="/js/editor.js")
