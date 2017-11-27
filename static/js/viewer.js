@@ -1,7 +1,7 @@
 String.prototype.format = function () {
   let content = this;
   for ( let i = 0; i < arguments.length; i++ ) {
-    content = content.replace( "{" + i + "}", arguments[ i ] );
+    content = content.replace( "{" + i + "}", arguments[i] );
   }
   return content;
 };
